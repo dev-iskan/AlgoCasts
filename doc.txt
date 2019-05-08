@@ -28,3 +28,6 @@ debugging:
 
   - then we need to compare all characters' values and return max
     we loop through obj and assign max and maxChar if value is greater than previous
+
+
+5. fizzbuzz
