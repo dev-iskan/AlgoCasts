@@ -10,3 +10,8 @@ debugging:
  - manually call function
  - run node inspect index.js
  - 'c' to continue, 'repl' to read variables
+
+
+2. palindrome
+
+3.reverse int

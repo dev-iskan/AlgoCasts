@@ -8,6 +8,15 @@
 //   reverseInt(-15) === -51
 //   reverseInt(-90) === -9
 
-function reverseInt(n) {}
+// solution 1
+function reverseInt(n) {
+  let reversed = n.toString().split('').reverse().join('')
+  return parseInt(reversed) * Math.sign(n)
+}
+
+// we skip 0 after number like 20, and save 0 itself
+// this is done by parseInt method, so no need to check when reversing string
+
+reverseInt(0)
 
 module.exports = reverseInt;
