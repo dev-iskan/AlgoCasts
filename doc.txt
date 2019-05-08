@@ -14,4 +14,17 @@ debugging:
 
 2. palindrome
 
-3.reverse int
+3. reverse int
+
+4. max chars:
+  - we need to split string into objects where key is character and value is number of occurence
+  hello ->
+  {
+    'h' : 1,
+    'e' : 1,
+    'l' : 2,
+    'o' : 1
+  }
+
+  - then we need to compare all characters' values and return max
+    we loop through obj and assign max and maxChar if value is greater than previous
