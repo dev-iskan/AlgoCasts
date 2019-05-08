@@ -15,19 +15,22 @@
 // }
 
 // solution 2
-// function reverse(str) {
-//   let reversedString = ''
+function reverse(str) {
+  let reversedString = ''
 
-//   for (let char of str) {
-//     reversedString = char + reversedString
-//   }
+  for (let char of str) {
+    reversedString = char + reversedString
+    debugger;
+  }
 
-//   return reversedString
-// }
+  return reversedString
+}
 
 // solution 3
-function reverse(str) {
-  return str.split('').reduce((reversed, char) => char + reversed, '')
-}
+// function reverse(str) {
+//   return str.split('').reduce((reversed, char) => char + reversed, '')
+// }
+
+reverse('rdsfo')
 
 module.exports = reverse;

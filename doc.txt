@@ -3,4 +3,10 @@ jest folder --watch
 
 
 
-1. reverse string:
+1. reverse string
+
+debugging:
+ - use 'debugger' in code
+ - manually call function
+ - run node inspect index.js
+ - 'c' to continue, 'repl' to read variables
