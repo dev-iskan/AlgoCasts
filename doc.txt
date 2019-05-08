@@ -1,0 +1,6 @@
+cd exercise
+jest folder --watch
+
+
+
+1. reverse string:
