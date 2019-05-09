@@ -33,3 +33,6 @@ debugging:
 5. fizzbuzz
 
 6. chunk
+
+7. anagrams
+first solution is bad as we loop several times
