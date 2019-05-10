@@ -36,3 +36,6 @@ debugging:
 
 7. anagrams
 first solution is bad as we loop several times
+
+
+8. capitalize
