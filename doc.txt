@@ -41,3 +41,5 @@ first solution is bad as we loop several times
 8. capitalize
 
 9. steps
+
+10. pyramids
