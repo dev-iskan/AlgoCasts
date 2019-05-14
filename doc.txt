@@ -43,3 +43,6 @@ first solution is bad as we loop several times
 9. steps
 
 10. pyramids
+
+
+11. vowels
