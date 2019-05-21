@@ -37,12 +37,12 @@ debugging:
 7. anagrams
 first solution is bad as we loop several times
 
-
 8. capitalize
 
 9. steps
 
 10. pyramids
 
-
 11. vowels
+
+12. spiral matrix
