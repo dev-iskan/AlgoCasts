@@ -54,4 +54,8 @@ slow fib -> memoize -> fast fib
 
 14. data structures - queue
 
+  weave: compine two queues into one
+
 15. stack data - struct
+
+16. queue of two stacks:
