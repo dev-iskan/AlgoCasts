@@ -52,3 +52,4 @@ first solution is bad as we loop several times
 in recursive solution we call same function again and again, how to fix:
 slow fib -> memoize -> fast fib
 
+14. data structures - queue
