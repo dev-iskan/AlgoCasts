@@ -8,6 +8,65 @@
 // Example:
 //   fib(4) === 3
 
-function fib(n) {}
 
+// solution 1
+// function fib(n) {
+//   const result = [0, 1];
+//
+//   for (let i = 2; i <= n; i++) {
+//     const a = result[i - 1];
+//     const b = result[i - 2];
+//
+//     result.push(a + b);
+//   }
+//
+//   return result[n];
+// }
+
+
+// solution 2
+
+// function fib(n) {
+//   // stop condition
+//   if(n < 2) {
+//     return n
+//   }
+
+//   // return sum of two fib results
+//   return fib(n-1) + fib(n-2)
+// }
+
+
+// solution 3
+function memoize (fn) {
+  const cache = {} // storage of all previous calls of fn
+
+  // return function with arguments
+  return function (...args) {
+
+    // if function call exists return it
+    if (cache[args]) {
+      return cache[args]
+    }
+
+    // otherwise call function and save its result in cache
+    const result = fn.apply(this, args);
+    cache[args] = result;
+
+    return result;
+  }
+}
+
+function fib(n) {
+  // stop condition
+  if(n < 2) {
+    return n
+  }
+
+  // return sum of two fib results
+  return fib(n-1) + fib(n-2)
+}
+
+fib = memoize(fib)
+console.log(fib(77))
 module.exports = fib;

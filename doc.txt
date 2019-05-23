@@ -46,3 +46,9 @@ first solution is bad as we loop several times
 11. vowels
 
 12. spiral matrix
+
+13. fibonacci : as in recursive situation time complexity where slow, we can improve by memoization:
+
+in recursive solution we call same function again and again, how to fix:
+slow fib -> memoize -> fast fib
+
