@@ -57,16 +57,17 @@ function memoize (fn) {
   }
 }
 
-function fib(n) {
+function slowFib(n) {
   // stop condition
   if(n < 2) {
     return n
   }
 
   // return sum of two fib results
+  // !! IMPORTANT actually it becomes not recursive function as we call memoized version inside of function
   return fib(n-1) + fib(n-2)
 }
 
-fib = memoize(fib)
+const fib = memoize(slowFib)
 console.log(fib(77))
 module.exports = fib;
