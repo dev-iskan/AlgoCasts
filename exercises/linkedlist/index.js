@@ -21,6 +21,42 @@ class LinkedList {
     // assign new head to new node itself
     this.head = newNode
   }
+
+  size () {
+    // initialize counter and iteratable node
+    let counter = 0
+    let node = this.head
+
+    // loop until null
+    while (node) {
+      counter++
+
+      // iterate to next node
+      node = node.next
+    }
+
+    return counter
+  }
+
+  getFirst () {
+    return this.head
+  }
+
+  getLast () {
+    if(!this.head) {
+      return null
+    }
+    // loop to last item
+    let node = this.head
+    while(node) {
+      //if next of node is null, than its last node
+      if (!node.next) {
+        return node
+      }
+
+      node = node.next
+    }
+  }
 }
 
 module.exports = { Node, LinkedList };
