@@ -59,3 +59,10 @@ slow fib -> memoize -> fast fib
 15. stack data - struct
 
 16. queue of two stacks:
+
+
+17. Linked list:
+
+node , can be head and tail
+tail node always points to null
+node consist of data and next (reference to next node)
