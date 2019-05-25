@@ -57,6 +57,46 @@ class LinkedList {
       node = node.next
     }
   }
+
+  clear () {
+    this.head = null
+  }
+
+  removeFirst () {
+    // if linked list empty return null
+    if(!this.head) {
+      return null
+    }
+
+    // just assign first node's next to head of linked list
+    this.head = this.head.next
+  }
+
+  removeLast () {
+    // if linked list empty return null
+    if(!this.head) {
+      return null
+    }
+
+    // if there is only one node
+    if(!this.head.next) {
+      this.head = null
+      return
+    }
+
+    // initialize previous to head and node to head.next variables
+    let previous = this.head
+    let node = this.head.next
+
+    // iterate till the last element until node.next
+    while (node.next) {
+      previous = node
+      node = node.next
+    }
+
+    // remove last element
+    previous.next = null
+  }
 }
 
 module.exports = { Node, LinkedList };
