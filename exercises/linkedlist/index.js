@@ -22,6 +22,18 @@ class LinkedList {
     this.head = newNode
   }
 
+  insertLast (data) {
+    const last = this.getLast()
+
+    if (last) {
+      // if last exists
+      last.next = new Node(data)
+    } else {
+      // if list is empty
+      this.head = new Node(data)
+    }
+  }
+
   size () {
     // initialize counter and iteratable node
     let counter = 0
@@ -97,6 +109,63 @@ class LinkedList {
     // remove last element
     previous.next = null
   }
+
+
+  getAt (index) {
+    let counter = 0
+    let node = this.head
+
+    while(node) {
+      if (counter === index) {
+        return node
+      }
+
+      counter++
+      node = node.next
+    }
+    // in case head null or counter is more than size of list return null
+    return null
+  }
+
+  removeAt (index) {
+    // if list is empty
+    if(!this.head) {
+      return
+    }
+
+    // remove first node
+    if(index === 0) {
+      this.head = this.head.next
+      return
+    }
+
+    // get node before deleted
+    const previous = this.getAt(index - 1)
+    // edge cases when index out of boundary
+    if(!previous || !previous.next) {
+      return
+    }
+    previous.next = previous.next.next
+  }
+
+  insertAt (data, index) {
+    // insert if list empty
+    if(!this.head) {
+      this.head = new Node(data)
+      return
+    }
+
+    // if has first element
+    if (index === 0) {
+      this.head = new Node(data, this.head)
+    }
+
+    // if not empty and if out of boundaries just insert in the end
+    const previous = this.getAt(index - 1) || this.getLast()
+    const node = new Node(data, previous.next)
+    previous.next = node
+  }
+
 }
 
 module.exports = { Node, LinkedList };
