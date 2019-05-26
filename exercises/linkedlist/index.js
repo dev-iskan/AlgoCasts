@@ -158,12 +158,36 @@ class LinkedList {
     // if has first element
     if (index === 0) {
       this.head = new Node(data, this.head)
+      return
     }
 
     // if not empty and if out of boundaries just insert in the end
     const previous = this.getAt(index - 1) || this.getLast()
     const node = new Node(data, previous.next)
     previous.next = node
+  }
+
+  forEach(fn) {
+    // get function as param
+    let node = this.head;
+    let counter = 0;
+
+    // iterate through nodes using while
+    while (node) {
+      // apply function on node
+      fn(node, counter);
+      node = node.next;
+      counter++;
+    }
+  }
+
+  // iterator with generator
+  *[Symbol.iterator]() {
+    let node = this.head
+    while(node) {
+      yield node
+      node = node.next
+    }
   }
 
 }

@@ -66,3 +66,6 @@ slow fib -> memoize -> fast fib
 node , can be head and tail
 tail node always points to null
 node consist of data and next (reference to next node)
+
+
+as we added insertAt, getAt, removeAt methods - we can easily replace specific methods such as removeFirst and etc.
