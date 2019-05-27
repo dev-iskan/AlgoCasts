@@ -12,6 +12,22 @@
 //   c.next = b;
 //   circular(l) // true
 
-function circular(list) {}
+function circular(list) {
+  // initialize two pointing nodes
+  let slow = list.getFirst()
+  let fast = list.getFirst()
+
+  // until fast.next not null
+  while(fast.next && fast.next.next)  {
+    slow = slow.next
+    fast = fast.next.next
+
+    // if them points to identical node, than there is loop
+    if(slow === fast) return true
+  }
+
+  // in case there is no loop return false
+  return false
+}
 
 module.exports = circular;

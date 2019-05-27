@@ -74,3 +74,7 @@ as we added insertAt, getAt, removeAt methods - we can easily replace specific m
 18. midpoint
 
 Solution: is to create two pointing nodes: slow, fast. on each iteration we should check fast node and its two consecuitive nodes.
+
+19. circular
+
+Problem when some node's next pointer points to previous node causing infinite loop
