@@ -83,3 +83,6 @@ Problem when some node's next pointer points to previous node causing infinite l
 20. from last
 
 find node from n to last
+
+
+21. trees:
