@@ -78,3 +78,8 @@ Solution: is to create two pointing nodes: slow, fast. on each iteration we shou
 19. circular
 
 Problem when some node's next pointer points to previous node causing infinite loop
+
+
+20. from last
+
+find node from n to last
