@@ -39,12 +39,29 @@ class Tree {
       // pull out first el
       const node = arr.shift()
 
-      // add its children to array
+      // add its children to end of array
       arr.push(...node.children)
 
       //implement function on this node
       fn(node)
     }
+  }
+
+  traverseDF (fn) {
+    // create array of nodes from top
+    const arr = [this.root]
+
+     // untill array is not empty
+     while(arr.length) {
+        // pull out first el
+        const node = arr.shift()
+
+        // add its children to beginning of array
+        arr.unshift(...node.children)
+
+        //implement function on this node
+        fn(node)
+     }
   }
 }
 
