@@ -86,3 +86,5 @@ find node from n to last
 
 
 21. trees:
+
+traverse BF - iterate through tree and implement function as param

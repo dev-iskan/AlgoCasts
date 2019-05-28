@@ -25,6 +25,27 @@ class Node {
   }
 }
 
-class Tree {}
+class Tree {
+  constructor () {
+    this.root = null
+  }
+
+  traverseBF (fn) {
+    // create array of nodes from top
+    const arr = [this.root]
+
+    // untill array is not empty
+    while(arr.length) {
+      // pull out first el
+      const node = arr.shift()
+
+      // add its children to array
+      arr.push(...node.children)
+
+      //implement function on this node
+      fn(node)
+    }
+  }
+}
 
 module.exports = { Tree, Node };
