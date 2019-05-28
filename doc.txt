@@ -89,3 +89,9 @@ find node from n to last
 
 traverse BF - iterate through tree and implement function as param
 traverse DF - iterate from top to bottom and implement function
+
+22. level width, when we see word "width" we should consider using BF solution
+
+Level width is the array of numbers, each number saying amount of nodes on each level 
+
+Solution idea is to iterate through tree BF and add additional character to count nodes on each level
