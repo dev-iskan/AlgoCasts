@@ -5,6 +5,20 @@
 // every node's right hand child is greater than
 // the parent
 
-function validate(node, min = null, max = null) {}
+function validate(node, min = null, max = null) {
+  // as function is recursive we have stop cases:
+
+  // if one of this statements falsy tree is not bts
+  if (max !== null && node.data > max) return false
+  if (min !== null && node.data < min) return false
+
+  // call recursive part for each left and right descendants
+  if (node.left && !validate(node.left, min, node.data)) return false
+  if (node.right && !validate(node.right, node.data, max)) return false
+
+
+  // otherwise return true
+  return true
+}
 
 module.exports = validate;

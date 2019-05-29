@@ -103,3 +103,5 @@ left child less than parent, right more than parent
 
  - insert
  - contains
+
+ 24 validate bst: function which says whether tree is bst or not
