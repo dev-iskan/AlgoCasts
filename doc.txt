@@ -105,3 +105,10 @@ left child less than parent, right more than parent
  - contains
 
  24 validate bst: function which says whether tree is bst or not
+
+
+
+ Sorting algo:
+  - bubblesort
+  - selectionsort
+  - mergesort
