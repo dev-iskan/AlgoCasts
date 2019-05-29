@@ -95,3 +95,11 @@ traverse DF - iterate from top to bottom and implement function
 Level width is the array of numbers, each number saying amount of nodes on each level 
 
 Solution idea is to iterate through tree BF and add additional character to count nodes on each level
+
+
+23. binary search tree:
+node has only two children left and right
+left child less than parent, right more than parent
+
+ - insert
+ - contains
